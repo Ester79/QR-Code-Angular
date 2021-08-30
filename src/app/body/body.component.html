@@ -1,0 +1,54 @@
+
+
+<div class="container">
+  <div class="container">
+  <div>
+    <p>Update Level:</p>
+    <div class="btn-group" role="group">
+      <button (click)="updateLevel('L')" class="btn btn-outline-light">Lowest</button>
+      <button (click)="updateLevel('M')" class="btn btn-outline-light">Medium</button>
+      <button (click)="updateLevel('Q')" class="btn btn-outline-light">Equality</button>
+      <button (click)="updateLevel('H')" class="btn btn-outline-light">Highest</button>
+    </div>
+  </div>
+  <div>
+    <p>Update Width: </p>
+    <div class="btn-group" role="group">
+      <button (click)="updateWidth(100)" class="btn btn-outline-light">100</button>
+      <button (click)="updateWidth(200)" class="btn btn-outline-light">200</button>
+      <button (click)="updateWidth(300)" class="btn btn-outline-light">300</button>
+      <button (click)="updateWidth(400)" class="btn btn-outline-light">400</button>
+    </div>
+  </div>
+  <div>
+    <p>Update Background-Color:</p>
+    <div class="btn-group" role="group">
+      <button (click)="updatebackground('red')" class="btn btn-outline-light">Red</button>
+      <button (click)="updatebackground('blue')" class="btn btn-outline-light">Blue</button>
+      <button (click)="updatebackground('green')" class="btn btn-outline-light">Green</button>
+      <button (click)="updatebackground('yellow')" class="btn btn-outline-light">Yellow</button>
+      <button (click)="updatebackground('white')" class="btn btn-outline-light">White</button>
+    </div>
+  </div>
+  <div>
+    <p>Update Foreground-Color:</p>
+    <div class="btn-group" role="group">
+      <button (click)="updateforeground('orange')" class="btn btn-outline-light">Orange</button>
+      <button (click)="updateforeground('grey')" class="btn btn-outline-light">Grey</button>
+      <button (click)="updateforeground('purple')" class="btn btn-outline-light">Purple</button>
+      <button (click)="updateforeground('black')" class="btn btn-outline-light">Black</button>
+      <button (click)="updateforeground('aquamarine')" class="btn btn-outline-light">Aqua</button>
+    </div>
+  </div>
+
+</div>
+</div>
+<div>
+  <button (click)="updateOriginalFormat('original')"class="btn btn-lm btn-block">Go to the original format</button>
+</div>
+
+
+<div class="container, codigoQR">
+  <qr-code [value]="qrInfo" [size]="width" [level]="level" [background]="background" [foreground]="foreground">
+  </qr-code>
+</div>
